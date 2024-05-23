@@ -77,6 +77,7 @@ export class CustomersRepository {
   ): Promise<string> {
     delete customer.membershipCurrency;
     delete customer.paidAmount;
+    delete customer.paymentMethod;
     const response = await this.getCustomersCollection(tenantId).add(customer);
     return response.id;
   }

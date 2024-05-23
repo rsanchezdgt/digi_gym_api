@@ -47,11 +47,13 @@ export class CustomersService {
     }
 
     //? create payment object
+    const membershipData = await this.membershipService.getById(tenantId, customer.membershipId);
     const paymentDto = new CreatePaymentDto();
-    paymentDto.membershipId = customer.membershipId;
-    paymentDto.membershipName = '';
-    paymentDto.currency = customer.membershipCurrency;
+    paymentDto.membershipId = membershipData.id;
+    paymentDto.membershipName = membershipData.name;
+    paymentDto.currency = membershipData.currency;
     paymentDto.paidAmount = customer.paidAmount;
+    paymentDto.paymentMethod = customer.paymentMethod;
     paymentDto.isReferred =
       customer.metBy.toLocaleLowerCase().includes('referido') ||
       customer.metBy.toLocaleLowerCase().includes('referida');
@@ -98,6 +100,7 @@ export class CustomersService {
     const paymentDto = new CreatePaymentDto();
     paymentDto.customerId = renewMembershipDto.customerId;
     paymentDto.paidAmount = renewMembershipDto.paidAmount;
+    paymentDto.paymentMethod = renewMembershipDto.paymentMethod;
     paymentDto.currency = membershipData.currency;
     paymentDto.paymentDate = renewMembershipDto.membershipStartDate;
     paymentDto.membershipId = renewMembershipDto.membershipId;

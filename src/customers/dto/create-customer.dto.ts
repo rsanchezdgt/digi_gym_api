@@ -10,6 +10,7 @@ export class CreateCustomerDto {
   membershipId: string;
   membershipCurrency: string;
   paidAmount: number;
+  paymentMethod: string;
   membershipStartDate: string;
   membershipEndDate: string;
   metBy: string; // Referido || Otro -> enable textfield

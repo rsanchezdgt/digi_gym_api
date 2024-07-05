@@ -5,6 +5,7 @@ export class CreateCustomerDto {
   idCard?: string;
   dateOfBirth?: string;
   nationality: string;
+  nationalityOther: string;
   phone: string;
   email: string;
   membershipId: string;

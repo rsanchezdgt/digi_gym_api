@@ -122,9 +122,12 @@ export class CustomersRepository {
       idCard: customer.idCard,
       dateOfBirth: customer.dateOfBirth,
       nationality: customer.nationality,
+      nationalityOther: customer.nationalityOther,
       phone: customer.phone,
       email: customer.email,
       metBy: customer.metBy,
+      metByOther: customer.metByOther,
+      referredBy: customer.referredBy,
       sex: customer.sex,
     });
   }

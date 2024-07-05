@@ -7,6 +7,7 @@ export class UpdateCustomerDto extends PartialType(CreateCustomerDto) {
   idCard?: string;
   dateOfBirth?: string;
   nationality: string;
+  nationalityOther: string;
   phone: string;
   email: string;
   metBy: string;

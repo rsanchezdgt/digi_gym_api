@@ -5,6 +5,7 @@ export class Customer {
   public idCard?: string;
   public dateOfBirth?: string;
   public nationality: string;
+  public nationalityOther?: string;
   public phone: string;
   public email: string;
   public membershipId: string;

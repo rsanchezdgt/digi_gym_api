@@ -15,4 +15,5 @@ export class UpdateCustomerDto extends PartialType(CreateCustomerDto) {
   referredBy: string;
   sex: boolean;
   userId: string;
+  notes: string;
 }

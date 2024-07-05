@@ -17,4 +17,5 @@ export class Customer {
   public pictureUrl?: string;
   public sex: boolean;
   public userId: string;
+  public notes?: string;
 }

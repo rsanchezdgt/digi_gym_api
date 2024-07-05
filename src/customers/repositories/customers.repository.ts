@@ -129,6 +129,7 @@ export class CustomersRepository {
       metByOther: customer.metByOther,
       referredBy: customer.referredBy,
       sex: customer.sex,
+      notes: customer.notes,
     });
   }
   

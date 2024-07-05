@@ -2,8 +2,8 @@ export class CreateCustomerDto {
   name: string;
   lastName: string;
   sex: boolean;
-  idCard: string;
-  dateOfBirth: string;
+  idCard?: string;
+  dateOfBirth?: string;
   nationality: string;
   phone: string;
   email: string;

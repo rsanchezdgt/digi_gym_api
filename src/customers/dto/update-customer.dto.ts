@@ -4,8 +4,8 @@ import { CreateCustomerDto } from './create-customer.dto';
 export class UpdateCustomerDto extends PartialType(CreateCustomerDto) {
   name: string;
   lastName: string;
-  idCard: string;
-  dateOfBirth: string;
+  idCard?: string;
+  dateOfBirth?: string;
   nationality: string;
   phone: string;
   email: string;

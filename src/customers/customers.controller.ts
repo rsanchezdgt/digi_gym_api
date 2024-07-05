@@ -84,4 +84,10 @@ export class CustomersController {
     const tenantId = req.query['tenantId'];
     return this.customersService.renewMembership(tenantId, renewMembershipDto);
   }
+
+  @Post('freeze-membership')
+  freezeMembership(@Req() req, @Body() data: any) {
+    const tenantId = req.query['tenantId'];
+    this.customersService.freezeMembership(tenantId, data);
+  }
 }

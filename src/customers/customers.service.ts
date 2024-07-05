@@ -112,6 +112,10 @@ export class CustomersService {
     await this.paymentsService.create(tenantId, paymentDto);
   }
 
+  async freezeMembership(tenantId: string, data: any) {
+    await this.customerRepository.freezeMembership(tenantId, data);
+  }
+
   remove(tenantId: string, id: string) {
     console.log(tenantId);
     return `This action removes a #${id} customer`;

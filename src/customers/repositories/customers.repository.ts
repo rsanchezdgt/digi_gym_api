@@ -144,4 +144,9 @@ export class CustomersRepository {
       membershipEndDate: renewMembershipDto.membershipEndDate,
     });
   }
+
+  public async freezeMembership(tenantId: string, data: any) {
+    const customerDoc = this.getCustomersCollection(tenantId).doc(data['customerId']);
+    await customerDoc.update({ membershipEndDate: data['newEndDate'] });
+  }
 }

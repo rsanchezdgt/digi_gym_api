@@ -11,6 +11,8 @@ export class Customer {
   public membershipStartDate: string;
   public membershipEndDate: string;
   public metBy: string;
+  public metByOther?: string;
+  public referredBy?: string;
   public pictureUrl?: string;
   public sex: boolean;
   public userId: string;

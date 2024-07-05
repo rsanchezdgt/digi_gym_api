@@ -13,5 +13,7 @@ export class CreateCustomerDto {
   paymentMethod: string;
   membershipStartDate: string;
   membershipEndDate: string;
-  metBy: string; // Referido || Otro -> enable textfield
+  metBy: string;
+  metByOther: string;
+  referredBy: string;
 }

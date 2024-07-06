@@ -57,10 +57,10 @@ export class CustomersController {
     return this.customersService.findPaginated(tenantId, after);
   }
 
-  @Get('get-membership-end-date/:id')
+  @Get('get-customer-membership/:id')
   getMembershipEndDate(@Req() req, @Param('id') id: string) {
     const tenantId = req.query['tenantId'];
-    return this.customersService.getMembershipEndDate(tenantId, id);
+    return this.customersService.getCustomerMembership(tenantId, id);
   }
 
   @Patch(':id')

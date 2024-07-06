@@ -59,16 +59,19 @@ export class CustomersRepository {
     return undefined;
   }
 
-  public async getMembershipEndDate(
+  public async getCustomerMembership(
     tenantId: string,
-    id: string,
-  ): Promise<string> {
-    const doc = await this.getCustomersCollection(tenantId).doc(id).get();
+    customerId: string,
+  ) {
+    const doc = await this.getCustomersCollection(tenantId).doc(customerId).get();
 
     const customer = new Customer();
     Object.assign(customer, doc.data());
 
-    return customer.membershipEndDate;
+    return {
+      "customerName": customer.name + ' ' + customer.lastName,
+      "endDate": customer.membershipEndDate,
+    };
   }
 
   public async create(

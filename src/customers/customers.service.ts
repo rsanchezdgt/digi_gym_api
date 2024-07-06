@@ -78,8 +78,8 @@ export class CustomersService {
     return this.customerRepository.getPaginated(tenantId, after);
   }
 
-  getMembershipEndDate(tenantId: string, id: string) {
-    return this.customerRepository.getMembershipEndDate(tenantId, id);
+  getCustomerMembership(tenantId: string, customerId: string) {
+    return this.customerRepository.getCustomerMembership(tenantId, customerId);
   }
 
   async update(tenantId: string, id: string, updateCustomerDto: UpdateCustomerDto) {

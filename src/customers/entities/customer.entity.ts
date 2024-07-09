@@ -18,4 +18,6 @@ export class Customer {
   public sex: boolean;
   public userId: string;
   public notes?: string;
+  public company?: string;
+  public position?: string;
 }

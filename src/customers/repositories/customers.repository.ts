@@ -133,6 +133,8 @@ export class CustomersRepository {
       referredBy: customer.referredBy,
       sex: customer.sex,
       notes: customer.notes,
+      company: customer.company,
+      position: customer.position,
     });
   }
   

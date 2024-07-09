@@ -18,4 +18,6 @@ export class CreateCustomerDto {
   metByOther: string;
   referredBy: string;
   notes: string;
+  company: string;
+  position: string;
 }

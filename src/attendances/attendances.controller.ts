@@ -17,4 +17,10 @@ export class AttendancesController {
     const tenantId = req.query['tenantId'];
     return this.attendancesService.getByCustomer(tenantId, id);
   }
+
+  @Get('get-by-membership/:id')
+  getByMembership(@Req() req, @Param('id') id: string) {
+    const tenantId = req.query['tenantId'];
+    return this.attendancesService.getByMembership(tenantId, id);
+  }
 }

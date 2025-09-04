@@ -4,3 +4,11 @@ export class Attendance {
   public attendanceDate: string;
   public attendanceHour: string;
 }
+
+export class AttendanceWithCustomer {
+  public id: string;
+  public customerId: string;
+  public customerName: string;
+  public attendanceDate: string;
+  public attendanceHour: string;
+}

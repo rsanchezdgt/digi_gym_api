@@ -13,4 +13,8 @@ export class AttendancesService {
   getByCustomer(tenantId: string, customerId: string) {
     return this.attendancesRepository.getByCustomer(tenantId, customerId);
   }
+
+  getByMembership(tenantId: string, membershipId: string) {
+    return this.attendancesRepository.getByMembership(tenantId, membershipId);
+  }
 }
